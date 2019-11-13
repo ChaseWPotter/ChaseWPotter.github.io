@@ -37,8 +37,6 @@
     top: 0px;
     left: 56%;
     right: 0px;
-    display: flex;
-    align-items: center;
     justify-content: center;
     background-color: pink;
 }
@@ -103,12 +101,18 @@
      background: rgba(248,80,50,1);
 }
 
+#storyimg{
+    max-height: 97%;
+    max-width: 97%;
+    width: 97%; 
+}
+
 </style>
   <body>
 
     <div id='container'>
         <div id='leftpane'>
-    </div>
+        <img id='storyimg' src="images/rose.jpg">
     <div id='rightpane'>
     </div>
     <div id='storytext'>
@@ -143,6 +147,35 @@
 
 
  <h1>Text Adventure</h1>
+
+
+<script>
+    var pic = document.getElementById('storyimg');
+    var ptext1 = document.getElementById('ptext1');
+    var ptext2 = document.getElementById('ptext2');
+    var ptext3 = document.getElementById('ptext3');
+    var ptext4 = document.getElementById('ptext4');
+    var b1 = document.getElementById('b1');
+    var b2 = document.getElementById('b2');
+    var b3 = document.getElementById('b3');
+    var b4 = document.getElementById('b4');
+    var state = "intro";
+
+    function intro(){
+        pics.scr = "images/rose.jpg";
+        ptext1.innetHTML("This is my intro to my story");
+        ptext2.innerHTML("");
+        ptext3.innerHTML("");
+        ptext4.innerHTML("");
+        b1.innerHTML("Yes");
+        b2.innerHTML("No");
+        b1.style.display = "block";
+        b2.style.display = "block";
+        b3.style.display = "none";
+        b4.style.display = "none";
+    }
+</script>
+
 
   </body>
 </html>
