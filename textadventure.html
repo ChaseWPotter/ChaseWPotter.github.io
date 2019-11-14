@@ -118,10 +118,10 @@
     <div id='storytext'>
     </div>
     <div id='choices'>
-        <a id='b1' href='#'>Choice 1</a>
-        <a id='b2' href='#'>Choice 2</a>
-        <a id='b3' href='#'>Choice 3</a>
-        <a id='b4' href='#'>Choice 4</a>
+        <a id='b1' onclick='bclick(1)'>Choice 1</a>
+        <a id='b2' onclick='bclick(2)'>Choice 2</a>
+        <a id='b3' onclick='bclick(3)'>Choice 3</a>
+        <a id='b4' onclick='bclick(4)'>Choice 4</a>
     </div>
     </div>
 
@@ -163,16 +163,43 @@
 
     function intro(){
         pics.scr = "images/rose.jpg";
-        ptext1.innetHTML("This is my intro to my story");
-        ptext2.innerHTML("");
-        ptext3.innerHTML("");
-        ptext4.innerHTML("");
-        b1.innerHTML("Yes");
-        b2.innerHTML("No");
+        ptext1.innetHTML = "This is my intro to my story";
+        ptext2.innerHTML = "";
+        ptext3.innerHTML = "";
+        ptext4.innerHTML = "";
+        b1.innerHTML = "Yes";
+        b2.innerHTML = "No";
+        b1.style.display = "block";
+        b2.style.display = "block";
+        b3.style.display = "block";
+        b4.style.display = "block";
+        state = "place second thing that will happen here";
+    }
+
+    function secondThing(){
+        pics.scr = "images/rose.jpg";
+        ptext1.innetHTML = "Hello, I am chase");
+        ptext2.innerHTML = "";
+        ptext3.innerHTML = "";
+        ptext4.innerHTML = "";
+        b1.innerHTML = "Yes";
+        b2.innerHTML = "No";
         b1.style.display = "block";
         b2.style.display = "block";
         b3.style.display = "none";
         b4.style.display = "none";
+        state = "place third thing that will happen here";
+    }
+
+
+    function bclick(button){
+        if(state == "intro"){
+            if(button == 1);
+                secondThing();
+            }
+            else if(button == 2){
+            }
+        }
     }
 </script>
 
