@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>repl.it</title>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+  </head>
+<style>
+#container{
+    position: absolute;
+    top: 70px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: red;
+}
+    #leftpane{
+    width: 56%;
+    height: 100%;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background color: blue;
+}
+    #rightpane{
+    width: 44%;
+    height: 100%;
+    float: left;
+    background color: blue;
+    }
+    #storytext{
+    position: absolute;
+    bottom: 50px;
+    top: 0px;
+    left: 56%;
+    right: 0px;
+    justify-content: center;
+    background-color: pink;
+}
+
+    #choices{
+    position: absolute;
+    bottom: 0px;
+    left: 56%;
+    right: 0px;
+    height: 69px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: yellow;
+    }
+
+    #b1{
+    display: inline-block;
+    background-color: purple;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin: 8px;
+    background: rgba(248,80,50,1);
+}
+
+    #b2{
+    display: inline-block;
+    background-color: purple;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+     margin: 8px;
+     background: rgba(248,80,50,1);
+}
+
+    #b3{
+    display: inline-block;
+    background-color: purple;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+     margin: 8px;
+     background: rgba(248,80,50,1);
+}
+
+    #b4{
+    display: inline-block;
+    background-color: purple;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+     margin: 8px;
+     background: rgba(248,80,50,1);
+}
+
+#storyimg{
+    max-height: 97%;
+    max-width: 97%;
+    width: 97%; 
+}
+
+</style>
+  <body>
+
+    <div id='container'>
+        <div id='leftpane'>
+        <img id='storyimg' src="images/rose.jpg">
+    <div id='rightpane'>
+    </div>
+    <div id='storytext'>
+    </div>
+    <div id='choices'>
+        <a id='b1' onclick='bclick(1)'>Choice 1</a>
+        <a id='b2' onclick='bclick(2)'>Choice 2</a>
+        <a id='b3' onclick='bclick(3)'>Choice 3</a>
+        <a id='b4' onclick='bclick(4)'>Choice 4</a>
+    </div>
+    </div>
+
+
+
+
+<div class="navbar">
+      <a href="index.html">Home</a>
+      <a href="resume.html">Resume</a>
+      <div class="dropdown">
+        <div class="morelinks">Projects</div>
+        <div class="dropdown-content">
+          <a href="textadventure.html">Text Adventure</a>
+          <a href="project2.html">project 2</a>
+          <a href="project3.html">project 3</a>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+
+ <h1>Text Adventure</h1>
+
+
+<script>
+    var pic = document.getElementById('storyimg');
+    var ptext1 = document.getElementById('ptext1');
+    var ptext2 = document.getElementById('ptext2');
+    var ptext3 = document.getElementById('ptext3');
+    var ptext4 = document.getElementById('ptext4');
+    var b1 = document.getElementById('b1');
+    var b2 = document.getElementById('b2');
+    var b3 = document.getElementById('b3');
+    var b4 = document.getElementById('b4');
+    var state = "intro";
+
+    function intro(){
+        pics.scr = "images/rose.jpg";
+        ptext1.innetHTML = "This is my intro to my story";
+        ptext2.innerHTML = "";
+        ptext3.innerHTML = "";
+        ptext4.innerHTML = "";
+        b1.innerHTML = "Yes";
+        b2.innerHTML = "No";
+        b1.style.display = "block";
+        b2.style.display = "block";
+        b3.style.display = "block";
+        b4.style.display = "block";
+        state = "meetWitch";
+    }
+
+    function meetWitch(){
+        pics.scr = "images/rose.jpg";
+        ptext1.innetHTML = "Hello, I am chase");
+        ptext2.innerHTML = "";
+        ptext3.innerHTML = "";
+        ptext4.innerHTML = "";
+        b1.innerHTML = "Yes";
+        b2.innerHTML = "No";
+        b1.style.display = "block";
+        b2.style.display = "block";
+        b3.style.display = "none";
+        b4.style.display = "none";
+        state = "place third thing that will happen here";
+    }
+
+
+    function bclick(button){
+        if(state == "intro"){
+            if(button == 1);
+                meetWitch();
+                state = "meetWitch"
+            }
+            else if(button == 2){
+            }
+        }
+        return false;
+    }
+</script>
+
+
+  </body>
+</html>

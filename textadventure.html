@@ -1,152 +1,122 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
+<title>Page Title</title>
 
-    <title>repl.it</title>
-
-<link rel="stylesheet" type="text/css" href="style.css">
-
-  </head>
 <style>
-#container{
-    position: absolute;
-    top: 70px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    background-color: red;
-}
-    #leftpane{
-    width: 56%;
-    height: 100%;
-    float: left;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background color: blue;
-}
-    #rightpane{
-    width: 44%;
-    height: 100%;
-    float: left;
-    background color: blue;
+    #container{
+        position: absolute;
+        top: 40px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        background-color: red;
     }
+
+    #leftpane{
+        width: 56%;
+        height: 100%;
+        float: left;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #rightpane{
+        width: 44%;
+        height: 100%;
+        float: left;
+    }
+
     #storytext{
-    position: absolute;
-    bottom: 50px;
-    top: 0px;
-    left: 56%;
-    right: 0px;
-    justify-content: center;
-    background-color: pink;
-}
+        position: absolute;
+        bottom: 100px;
+        top: 0px;
+        left: 56%;
+        right: 0px;
+        justify-content: center;
+        padding: 8px;
+    }
 
     #choices{
-    position: absolute;
-    bottom: 0px;
-    left: 56%;
-    right: 0px;
-    height: 69px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: yellow;
+        position: absolute;
+        bottom: 0px;
+        left: 56%;
+        right: 0px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
-    #b1{
-    display: inline-block;
-    background-color: purple;
-    color: white;
-    font-size: 16px;
-    padding: 10px;
-    border-radius: 8px;
-    text-decoration: none;
-    margin: 8px;
-    background: rgba(248,80,50,1);
-}
+    #b1, #b2, #b3, #b4{
+        display: inline-block;
+        background-color: red;
+        background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 100%);
+        color: red;
+        font-size: 16px;
+        padding: 10px;
+        border-radius: 8px;
+        text-decoration: none;
+        margin: 8px;
+    }
 
-    #b2{
-    display: inline-block;
-    background-color: purple;
-    color: white;
-    font-size: 16px;
-    padding: 10px;
-    border-radius: 8px;
-    text-decoration: none;
-     margin: 8px;
-     background: rgba(248,80,50,1);
-}
+    #ptext1{
+        color: black;
+    }
+    #ptext2{
+        color: black;
+    }
 
-    #b3{
-    display: inline-block;
-    background-color: purple;
-    color: white;
-    font-size: 16px;
-    padding: 10px;
-    border-radius: 8px;
-    text-decoration: none;
-     margin: 8px;
-     background: rgba(248,80,50,1);
-}
-
-    #b4{
-    display: inline-block;
-    background-color: purple;
-    color: white;
-    font-size: 16px;
-    padding: 10px;
-    border-radius: 8px;
-    text-decoration: none;
-     margin: 8px;
-     background: rgba(248,80,50,1);
-}
-
-#storyimg{
-    max-height: 97%;
-    max-width: 97%;
-    width: 97%; 
-}
+    #storyimg{
+        max-height: 94%;
+        max-width: 94%;
+        width: 94%; 
+    }
 
 </style>
-  <body>
+</head>
+<body>
 
-    <div id='container'>
-        <div id='leftpane'>
-        <img id='storyimg' src="images/rose.jpg">
-    <div id='rightpane'>
-    </div>
-    <div id='storytext'>
-    </div>
-    <div id='choices'>
-        <a id='b1' onclick='bclick(1)'>Choice 1</a>
-        <a id='b2' onclick='bclick(2)'>Choice 2</a>
-        <a id='b3' onclick='bclick(3)'>Choice 3</a>
-        <a id='b4' onclick='bclick(4)'>Choice 4</a>
-    </div>
-    </div>
-
-
-
-
-<div class="navbar">
+ <body>
+    <div class="navbar">
       <a href="index.html">Home</a>
       <a href="resume.html">Resume</a>
-      <div class="dropdown">
-        <div class="morelinks">Projects</div>
-        <div class="dropdown-content">
+      <a href="aboutme.html">About Me</a>
+    <div class="dropdown">
+    <div class="morelinks">Projects</div>
+    <div class="dropdown-content">
           <a href="textadventure.html">Text Adventure</a>
           <a href="project2.html">project 2</a>
           <a href="project3.html">project 3</a>
-        </div>
-      </div>
+
+    </div>
+    </div>
 
     </div>
 
+    <div id='container'>
+        <div id='leftpane'>
+            <img id='storyimg' src="images/rose.jpg">
+        </div>
 
+        <div id='rightpane'>
+            <div id='storytext'>
+                <p id='ptext1'></p>
+                <p id='ptext2'></p>
+                <p id='ptext3'></p>
+                <p id='ptext4'></p>
+            </div>
+            <div id='choices'>
+                <a id='b1' onclick="bclick(1)" href="#">Choice 1</a>
+                <a id='b2' onclick="bclick(2)" href="#">Choice 2</a>
+                <a id='b3' onclick="bclick(3)" href="#">Choice 3</a>
+                <a id='b4' onclick="bclick(4)" href="#">Choice 4</a>
+            </div>
+        </div>
+    </div>
 
-
-
- <h1>Text Adventure</h1>
 
 
 <script>
@@ -160,25 +130,11 @@
     var b3 = document.getElementById('b3');
     var b4 = document.getElementById('b4');
     var state = "intro";
+    intro();
 
     function intro(){
-        pics.scr = "images/rose.jpg";
-        ptext1.innetHTML = "This is my intro to my story";
-        ptext2.innerHTML = "";
-        ptext3.innerHTML = "";
-        ptext4.innerHTML = "";
-        b1.innerHTML = "Yes";
-        b2.innerHTML = "No";
-        b1.style.display = "block";
-        b2.style.display = "block";
-        b3.style.display = "block";
-        b4.style.display = "block";
-        state = "place second thing that will happen here";
-    }
-
-    function secondThing(){
-        pics.scr = "images/rose.jpg";
-        ptext1.innetHTML = "Hello, I am chase");
+        pic.src = "images/rose.jpg";
+        ptext1.innerHTML = "This is the intro to my story";
         ptext2.innerHTML = "";
         ptext3.innerHTML = "";
         ptext4.innerHTML = "";
@@ -188,21 +144,51 @@
         b2.style.display = "block";
         b3.style.display = "none";
         b4.style.display = "none";
-        state = "place third thing that will happen here";
+        
     }
 
+    function meetWitch(){
+        pic.src = "images/rose.jpg";
+        ptext1.innerHTML = "first text here";
+        ptext2.innerHTML = "second text";
+        ptext3.innerHTML = "";
+        ptext4.innerHTML = "";
+        b1.innerHTML = "button 1";
+        b2.innerHTML = "button 2";
+        b3.innerHTML = "button 3";
+        b1.style.display = "block";
+        b2.style.display = "block";
+        b3.style.display = "block";
+        b4.style.display = "none";
+    }
 
+    //state machine
     function bclick(button){
         if(state == "intro"){
-            if(button == 1);
-                secondThing();
+            if (button == 1){
+                meetWitch();
+                state = "meetWitch";
             }
             else if(button == 2){
+                intro();
+                state = "intro"
             }
         }
+        else if(state == "meetWitch"){
+            if(button == 1){
+                //attack
+                }
+            else if(button == 2){
+                //run
+            }
+            else if(button == 3){
+                //stay
+            }
+            
+        }
+        return false;
     }
+
 </script>
-
-
-  </body>
+</body>
 </html>
